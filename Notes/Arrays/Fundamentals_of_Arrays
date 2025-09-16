@@ -16,7 +16,9 @@ Static Array
 Fixed size (decided at the time of declaration)
 
 Example:
-int arr[5]; // C/C++
+
+int[] arr = new int[5];  // Java
+
 
 Advantages: Simple and efficient when size is known
 
@@ -27,8 +29,9 @@ Dynamic Array
 Size can grow or shrink during runtime
 
 Example:
-ArrayList<Integer> arr = new ArrayList<>(); // Java
-vector<int> arr; // C++
+
+ArrayList<Integer> arr = new ArrayList<>();  // Java
+
 
 Advantages: Flexible size
 
@@ -39,7 +42,9 @@ Limitations: Slightly slower during resizing operations
 Arrays are stored in contiguous memory blocks.
 
 Address of any element is calculated as:
+
 Address(arr[i]) = BaseAddress + (i × size_of_element)
+
 
 This allows constant time (O(1)) access to any element.
 
@@ -47,19 +52,20 @@ This allows constant time (O(1)) access to any element.
 
 Declaration Examples
 
-int arr[5]; // C/C++
+int[] arr = new int[5];
 
-int[] arr = new int[5]; // Java
 
 Initialization Examples
 
-int arr[5] = {1,2,3,4,5}; // C/C++
+int[] arr = {1, 2, 3, 4, 5};
 
-int[] arr = {1,2,3,4,5}; // Java
 
 Partial Initialization
 
-int arr[5] = {1,2}; // Remaining become 0
+int[] arr = new int[5];
+arr[0] = 1;
+arr[1] = 2;
+// Remaining elements become 0 by default
 
 5. Traversal (Iterating Through Elements)
 
